@@ -1,0 +1,11 @@
+version: '2.1'
+
+services:
+  nginx:
+    image: 'nginx'
+    ports:
+      - '8080:80'
+  app:
+    image: 'authorization:latest'
+    ports:
+      - '8081:8080'

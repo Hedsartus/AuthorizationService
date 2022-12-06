@@ -1,0 +1,10 @@
+server {
+	listen 80;
+	root /var/www/html;
+	location /signin {
+		try_files $uri $uri.html;
+	}
+	location / {
+		proxy_pass http://localhost:8080;
+	}
+}
